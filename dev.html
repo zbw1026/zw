@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <link rel="icon" type="image/x-icon" href="image\logo.png">
+<title>掌沃官网|开发者</title>
+      <h1 id="-掌沃官方网站"><a href="index.html"><img src="image\logo.png" width="60" height="60" align="center">
+</a> 掌沃官网|开发者</h1>
+<script>
+  function showModal() {
+    document.getElementById("overlay").style.display = "block";
+  }
+  
+  function redirectToLink() {
+    window.location.href = "http://wpa.qq.com/msgrd?v=3&uin=3129968314"; 
+  }
+  </script>
+  <style>
+    .button {
+      background-color: #2196f3;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: none;
+    }
+    
+    .modal {
+      background-color: white;
+      width: 400px;
+      height: 200px;
+      padding: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+    }
+    
+    .modal h2 {
+      text-align: center;
+    }
+    
+    .modal p {
+      text-align: center;
+    }
+    
+    .modal button {
+      background-color: #2196f3;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    </style>
+  </head>
+  <body>
+    <h2>💌致开发者</h2>
+    <h3>尊敬的开发者们，<br>感谢您对我们平台的关注与支持！为了提供更多优质的应用和服务给我们的用户，我们诚挚地邀请您将您的应用上传到我们的平台。<br>作为开发者，您的创意和技术能力无疑是推动科技进步和社会发展的重要力量。我们相信，您所开发的应用定能为用户带来便利、创造价值，并且满足他们的需求。<br>我们期待与您合作，共同打造出更多优秀的应用，为用户带来更加丰富、便捷的数字化生活体验。让我们携手努力，共创美好的未来！
+        <br>谢谢您的支持和参与！
+        <br>掌沃商店团队</h3>
+        <hr>
+        <button class="button" onclick="showModal()">立即入驻</button>
+        <div class="overlay" id="overlay">
+          <div class="modal">
+    <h2>温馨提示</h2>
+    <p>开发者系统尚未完善，请点击“确认”添加掌沃开发者QQ</p>
+    <button onclick="redirectToLink()">确认</button>
+  </div>
+</div>
+
+        <hr>
+      <footer class="site-footer">
+        <span class="site-footer-credits">©2023 掌沃+</span>
+      </footer>
+    </main>
+  </body>
+</html>

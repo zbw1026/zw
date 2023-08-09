@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>掌沃官网|无偿捐赠</title>
+    <link rel="icon" type="image/x-icon" href="image\logo.png">
+    <style>
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+        }
+
+        #popup .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+        }
+
+        #popup-image {
+            max-width: 100%;
+            max-height: 400px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0d8bf0;
+        }
+
+        @media (max-width: 480px) {
+            #popup {
+                width: 95%;
+                padding: 10px;
+            }
+
+            #popup .close-btn {
+                font-size: 14px;
+                top: 5px;
+                right: 5px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1 id="-掌沃官方网站"><a href="index.html"><img src="image\logo.png" width="60" height="60" align="center"></a>掌沃官网|无偿捐赠</h1>
+<hr>
+<img src="image\cola.png" alt="cola">
+<p>如果喜欢我们的软件，请开发者喝一杯可乐吧</p>
+<div class="card">
+    <button onclick="openPopup()">立即捐赠</button>
+</div>
+
+<div id="popup" style="display: none;">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <br>
+    <img id="popup-image" src="image/zfb.jpg" alt="选择无效">
+    <br>
+    <button onclick="changeImage('image/zfb.jpg')">支付宝</button>
+    <button onclick="changeImage('image/QQ.jpg')">QQ钱包</button>
+    <button onclick="changeImage('image/QQ.jpg')">微信支付</button>
+    <br>
+</div>
+
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+    function changeImage(imageUrl) {
+        document.getElementById("popup-image").src = imageUrl;
+    }
+</script>
+</body>
+<hr>
+<footer class="site-footer">
+    <span class="site-footer-credits">©2023 掌沃+</span>
+</footer>
+</html>

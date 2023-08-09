@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script>
+        // 检测设备类型
+        function isMobileDevice() {
+          return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+        
+        // 跳转到index.html页面
+        function redirectToIndex() {
+          window.location.href = "index.html";
+        }
+        
+        // 检测设备类型并执行跳转
+        window.onload = function() {
+          if (!isMobileDevice()) {
+            redirectToIndex();
+          }
+        };
+      </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>掌沃官网</title>
+    <style>
+        .button {
+      background-color: #006400;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 20px;
+      transition: background-color 0.3s;
+    }
+    .button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button1 {
+  background-color: #20e920;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 20px;
+  transition: background-color 0.3s;
+}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+    .slide {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+}
+
+.slide img {
+  max-width:width 100%;;
+  height: auto; /* 保持图片的纵横比 */
+}
+.slide {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+      var iframe = document.getElementById('responsive-iframe');
+      iframe.style.width = window.innerWidth + 'px';
+  });
+
+  window.addEventListener('resize', function() {
+      var iframe = document.getElementById('responsive-iframe');
+      iframe.style.width = window.innerWidth + 'px';
+  });
+</script>
+</head>
+<body>
+    <div class="header">
+      <h1 id="-掌沃官方网站"><img src="image\logo.png" width="60" height="60" align="center"><font _mstmutation="1" _msttexthash="18702814" _msthash="1">掌沃官方网站</font></h1>
+    </div>
+    <hr>
+    <div class="slideshow-container">
+        <img src="image\宣传图1.png" class="slide">
+       </div>
+    <div class="content">
+        <h2>欢迎来到掌沃商店官方网站！</h2>
+        <h3>掌沃商店是一款拥有众多资源的手表应用商店，创新性的将浏览和下载结合在一起。与其说是在找软件，更不如说是在寻宝。因为，掌沃商店的应用个个精选，其本身也ui精美，快来下载吧！</h3>
+    </div>
+    <img src="image\宣传图2_副本.png" class="slide">
+    <div class="button-container">
+      <a href="Download.html" class="button1">下载掌沃商店</a>
+    </div>
+    <hr>
+    <center>
+      <h3>想要了解更多？</h3>
+    </center>
+    <div class="button-container">
+    <a href="admin.html" class="button">申请管理员</a>
+    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=bGKeL_deQ-tGzm3GEp5BEu9o-qNrUTZ_&authKey=GQ4JWGNXff9IX91XKJgdA%2FJDhlNlhPa2eVP3GRB7MHlP8%2F%2FS61AvIiL9XVEh53PC&noverify=0&group_code=807152110" class="button">联系我们</a>
+    <a href="https://space.bilibili.com/1814635519" class="button">我们的B站</a>
+    </div>
+    <footer>
+      <p>版权所有 © 2023 掌沃+</p>
+      <p><a href="privacy.html">隐私政策</a></p>
+    </footer>
+ </body>
+</html>
