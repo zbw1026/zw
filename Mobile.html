@@ -79,18 +79,26 @@
     .slide {
   width: 80%;
   height: auto;
-  display: flex;
+  display: none; /* 隐藏所有图片 */
   justify-content: center; /* 水平居中 */
 }
 
 .slide img {
-  max-width:width 100%;;
+  max-width: width 100%;;
   height: auto; /* 保持图片的纵横比 */
 }
-.slide {
-  display: block;
-  margin: 0 auto;
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  max-width: 80%;
 }
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+}
+
 </style>
 <script>
   window.addEventListener('DOMContentLoaded', function() {
@@ -110,28 +118,71 @@
     </div>
     <hr>
     <div class="slideshow-container">
-        <img src="image\宣传图1.png" class="slide">
-       </div>
+        <div class="slide">
+            <img src="image\宣传图1.png">
+        </div>
+        <div class="slide">
+            <img src="image\宣传图2.png">
+        </div>
+        <div class="slide">
+            <img src="image\宣传图3.png">
+        </div>
+    </div>
+    <script>
+        var slides = document.getElementsByClassName("slide");
+        var currentSlide = 0;
+
+        // 显示当前图片
+        function showSlide() {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[currentSlide].style.display = "block";
+        }
+
+        // 下一张图片
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            showSlide();
+        }
+
+        // 上一张图片
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlide();
+        }
+
+        // 自动播放
+        setInterval(nextSlide, 3000);
+
+        // 初始显示第一张图片
+        showSlide();
+    </script>
     <div class="content">
-        <h2>欢迎来到掌沃商店官方网站！</h2>
-        <h3>掌沃商店是一款拥有众多资源的手表应用商店，创新性的将浏览和下载结合在一起。与其说是在找软件，更不如说是在寻宝。因为，掌沃商店的应用个个精选，其本身也ui精美，快来下载吧！</h3>
-    </div>
-    <img src="image\宣传图2_副本.png" class="slide">
-    <div class="button-container">
-      <a href="Download.html" class="button1">下载掌沃商店</a>
-    </div>
-    <hr>
-    <center>
-      <h3>想要了解更多？</h3>
-    </center>
-    <div class="button-container">
-    <a href="admin.html" class="button">申请管理员</a>
-    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=bGKeL_deQ-tGzm3GEp5BEu9o-qNrUTZ_&authKey=GQ4JWGNXff9IX91XKJgdA%2FJDhlNlhPa2eVP3GRB7MHlP8%2F%2FS61AvIiL9XVEh53PC&noverify=0&group_code=807152110" class="button">联系我们</a>
-    <a href="https://space.bilibili.com/1814635519" class="button">我们的B站</a>
-    </div>
-    <footer>
-      <p>版权所有 © 2023 掌沃+</p>
-      <p><a href="privacy.html">隐私政策</a></p>
-    </footer>
+      <h2>欢迎来到掌沃商店官方网站！</h2>
+      <h3>掌沃商店是一款拥有众多资源的手表应用商店，创新性的将浏览和下载结合在一起。与其说是在找软件，更不如说是在寻宝。因为，掌沃商店的应用个个精选，其本身也ui精美，快来下载吧！</h3>
+  </div>
+  <div class="button-container">
+    <a href="Download.html" class="button1">下载掌沃商店</a>
+  </div>
+  <hr>
+  <center>
+    <h3>想要了解更多？</h3>
+  </center>
+  <div class="button-container">
+  <a href="admin.html" class="button">申请管理员</a>
+  <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=bGKeL_deQ-tGzm3GEp5BEu9o-qNrUTZ_&authKey=GQ4JWGNXff9IX91XKJgdA%2FJDhlNlhPa2eVP3GRB7MHlP8%2F%2FS61AvIiL9XVEh53PC&noverify=0&group_code=807152110" class="button">联系我们</a>
+  <a href="https://space.bilibili.com/1814635519" class="button">我们的B站</a>
+  </div>
+  <footer>
+    <p>版权所有 © 2023 掌沃+</p>
+    <p><a href="privacy.html">隐私政策</a></p>
+  </footer>
  </body>
 </html>
